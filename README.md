@@ -31,12 +31,18 @@ This is a simple web application for searching, viewing, and creating a database
    ```bash
    cd ChessPlayerFinder
    ```
-3. Start the development server
+3. Install dependencies
+   ```bash
+   npm install
+   ```
+4. Start the development server
    ```bash
    npm run dev
    ```
 
 ## Usage
+
+- Use the switch button to search either on Lichess or Chess.com
 
 - To create you own "database" edit the players.js file
 
