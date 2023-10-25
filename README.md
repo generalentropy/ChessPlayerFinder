@@ -9,13 +9,13 @@ An application for searching, viewing, and creating a database of chess player p
 
 ## Description
 
-This is a simple web application for searching, viewing, and creating a database of chess player profiles. The application is written in vanilla JavaScript ES6 and CSS3, with no external libraries.
+This is a simple web application for searching, viewing, and creating a database of chess player profiles. The application is written in vanilla JavaScript and CSS3, with no external libraries.
 
 ## Features
 
 - This app allows you to fetch profiles from Chess.com and Lichess using their public API
 - Search for chess player profiles by name
-- View detailed profiles including statistics
+- View detailed profiles including statistics for bullet, blitz, rapid and puzzle (current and highest)
 - Works on mobile
 
 ![](https://i.imgur.com/VOVPAUD.jpg)
