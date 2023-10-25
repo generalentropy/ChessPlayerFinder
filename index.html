@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css?v=4.0" rel="stylesheet" />
+    <link href="normalize.css" rel="stylesheet" />
+    <script type="module" src="script.js?v=4.0"></script>
+    <title>🔎 Player finder</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="search">
+        <div class="title">Chess</div>
+
+        <div class="subtitle">Player finder <span class="shake">🔎</span></div>
+        <div id="container">
+          lichess
+          <input id="toggle-switch" type="checkbox" name="toggle" />
+          chess.com
+        </div>
+        <form id="searchForm">
+          <input
+            id="searchBox"
+            type="text"
+            autocomplete="off"
+            placeholder="Search for a Player"
+          />
+        </form>
+      </div>
+
+      <div class="cardWrapper"></div>
+      <div id="suggestions"></div>
+    </div>
+    <div class="footer-container">
+      <div class="footer">
+        <div class="footer-item app-version"></div>
+
+        <div class="footer-item bug">
+          <a
+            href="mailto:dev@chess.visualartisan.fr?subject=Signalement+d%27un+bug+sur+l%27application+playerFinder&body=Description+du+probl%C3%A8me+%3A%0D%0A%0D%0A%0D%0AOS+%28Windows%2C+macOS%2C+Android%2C+iOS...%29+%3A%0D%0ANavigateur+%28Chrome%2C+firefox%2C+Microsoft+Edge...%29+%3A"
+            >Report a Bug</a
+          >
+        </div>
+        <div class="footer-item idea">
+          <a
+            href="mailto:dev@chess.visualartisan.fr?subject=Id%C3%A9e+d%27am%C3%A9lioration+sur+playerFinder"
+            >Suggest an Improvement</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
