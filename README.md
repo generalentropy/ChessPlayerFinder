@@ -1,5 +1,7 @@
 # ChessPlayerFinder 🔎
 
+[View demo](https://chessplayerfinder.netlify.app/)
+
 An application for searching, viewing, and creating a database of chess player profiles
 
 ![](https://i.imgur.com/hn6VeqN.jpg)
@@ -7,7 +9,7 @@ An application for searching, viewing, and creating a database of chess player p
 
 ## Description
 
-This is a simple web application for searching, viewing, and creating a database of chess player profiles. The application is written in pure JavaScript ES6 and CSS3, with no external libraries.
+This is a simple web application for searching, viewing, and creating a database of chess player profiles. The application is written in vanilla JavaScript ES6 and CSS3, with no external libraries.
 
 ## Features
 
