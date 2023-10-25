@@ -7,6 +7,11 @@ const SUGGESTION_ITEM_CLASS = "suggestion-item";
 const selectionSwitch = document.querySelector("#toggle-switch");
 const searchBox = document.getElementById("searchBox");
 
+// https://medium.com/@andrewmasonmedia/how-to-use-images-with-vite-and-vue-937307a150c0
+function getImageUrl(name, ext) {
+  return new URL(`/img/${name}.${ext}`, import.meta.url).href;
+}
+
 const searchPlayer = function () {
   if (!searchBox.value) return;
 
@@ -86,7 +91,7 @@ const fetchPlayerDataFromChessComAPI = async (user, realName, callback) => {
     const source = "chess.com";
     const infosPlayer = await fetchPlayerData.json();
     const stats = await fetchPlayerStats.json();
-    const avatar = infosPlayer.avatar || "/img/user-image.svg";
+    const avatar = infosPlayer.avatar || `${getImageUrl("user-image", "svg")}`;
     const lastOnline = new Date(
       infosPlayer.last_online * 1000
     ).toLocaleDateString();
@@ -161,7 +166,7 @@ const fetchPlayerDataFromLichessAPI = async (user, realName, callback) => {
     const statsBullet = await fetchBulletStats.json();
     const statsBlitz = await fetchBlitzStats.json();
     const statsRapide = await fetchRapidStats.json();
-    const avatar = "/img/user-image.svg";
+    const avatar = `${getImageUrl("user-image", "svg")}`;
     const lastOnline = new Date(infosPlayer.seenAt).toLocaleDateString();
     const memberSince = new Date(infosPlayer.createdAt).toLocaleDateString();
     const username = infosPlayer?.username;
@@ -232,25 +237,37 @@ const generateChessCardHTML = (data, realName) => {
    
    <div class="stats">
    <div class="blitz item">
-   <div class="icon"><img id="bullet-icon" src="/img/bullet.svg"></div>
+   <div class="icon"><img id="bullet-icon" src="${getImageUrl(
+     "bullet",
+     "svg"
+   )}"></div>
    <div class="label">Bullet</div>
    <div class="value">${bulletRating}</div>
  </div>
 
    <div class="blitz item">
-   <div class="icon"><img id="blitz-icon" src="/img/lightning-fill.svg"></div>
+   <div class="icon"><img id="blitz-icon" src="${getImageUrl(
+     "lightning-fill",
+     "svg"
+   )}"></div>
    <div class="label">Blitz</div>
    <div class="value">${blitzRating}</div>
  </div>
      <div class="rapid item">
-     <div class="icon"><img id="rapid-icon" src="/img/timer.svg"></div>
+     <div class="icon"><img id="rapid-icon" src="${getImageUrl(
+       "timer",
+       "svg"
+     )}"></div>
        <div class="label">Rapid</div>
        <div class="value">${rapidRating}</div>
      </div>
 
     
      <div class="tactic item">
-     <div class="icon"><img id="puzzle-icon" src="/img/puzzle-piece-solid.svg"></div>
+     <div class="icon"><img id="puzzle-icon" src="${getImageUrl(
+       "puzzle-piece-solid",
+       "svg"
+     )}"></div>
        <div class="label">Puzzles</div>
        <div class="value">${tacticRating}</div>
      </div>
