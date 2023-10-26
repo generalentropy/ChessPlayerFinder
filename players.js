@@ -20,7 +20,7 @@ export const players = [
     lichess: "",
   },
   {
-    joueur: "Maxime Vachier-Lagrave",
+    joueur: "MVL",
     chesscom: "LyonBeast",
     lichess: "avalongamemaster",
   },
